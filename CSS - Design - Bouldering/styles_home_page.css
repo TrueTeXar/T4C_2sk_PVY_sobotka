@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    font-family: "interpreconnect", sans-serif;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul li {
+    display: inline;
+    font-weight: 900;
+}
+
+nav ul li:not(:first-child) {
+    margin: 10px;
+    margin-left: 50px;
+}
+
+main h1 {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 100px;
+}
+
+header nav ul {
+    text-align: right;
+    margin-right: 200px;
+}
+
+header img {
+    text-align: left;
+    margin-left: 200px;
+}
+
+
+
+
