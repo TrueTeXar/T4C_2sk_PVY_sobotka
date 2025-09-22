@@ -57,3 +57,13 @@ main h2 {
     padding-right: 320px;
     line-height: 2;
 }
+
+main h3 {
+    padding-left: 480px;
+}
+
+main section ol {
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 480px;
+}
