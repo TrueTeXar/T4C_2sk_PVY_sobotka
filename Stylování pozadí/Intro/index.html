@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Vlastnosti Pozadí - Demonstrace</title>
+    <link rel="stylesheet" href="pozadi-styl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Základní styly stránky --- */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* --- Obecný styl pro všechny ukázkové boxy --- */
+        .box {
+            height: 250px;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .box h2 {
+            margin-top: 0;
+        }
+
+        /* --- Styly pro jednotlivé boxy --- */
+
+        /* Box 1: Jen barva */
+        #color-box {
+            background-color: #3498db;
+        }
+
+        /* Box 2: Obrázek (opakující se) */
+        #image-box {
+            background-image: url('https://www.transparenttextures.com/patterns/az-subtle.png');
+        }
+
+        /* Box 3: Obrázek (neopakující se) */
+        #no-repeat-box {
+            background-image: url('https://www.transparenttextures.com/patterns/argyle.png');
+            background-size: 100px;
+            background-color: #95a5a6;
+            background-repeat: no-repeat;
+        }
+
+        /* Box 4: Obrázek s velikostí "cover" */
+        #size-cover-box {
+            background-image: url('https://images.unsplash.com/photo-1554034483-04fda0d3507b?w=500');
+            background-size: cover;
+        }
+
+        /* Box 5: Obrázek s velikostí "contain" */
+        #size-contain-box {
+            background-image: url('https://images.unsplash.com/photo-1554034483-04fda0d3507b?w=500');
+            background-color: #34495e;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* Box 6: Pozicování obrázku */
+        #position-box {
+            background-image: url('https://www.transparenttextures.com/patterns/checkered-pattern.png');
+            background-color: #16a085;
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+
+        /* Box 7: "Fixed" pozadí pro paralaxní efekt */
+        #attachment-fixed-box {
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Box 8: Více obrázků na pozadí */
+        #multiple-bg-box {
+            background-image:
+                    url('https://www.transparenttextures.com/patterns/checkered-pattern.png'), /* Obrázek nahoře */
+                    url('https://www.transparenttextures.com/patterns/argyle.png');   /* Obrázek pod ním */
+            background-repeat: no-repeat, no-repeat;
+            background-position: right bottom, left top;
+            background-size: 100px, 50px;
+            background-color: #e67e22;
+        }
+
+        /* Box 9: Zkratka "background" */
+        #shorthand-box {
+            /* color image repeat attachment position / size */
+            background: #c0392b url('https://www.transparenttextures.com/patterns/debut-light.png') no-repeat center center / contain;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>CSS Vlastnosti Pozadí</h1>
+    <p>Praktická ukázka různých `background` vlastností v CSS.</p>
+</header>
+
+<main>
+    <div class="box" id="color-box">
+        <h2>background-color</h2>
+        <p>Nejzákladnější vlastnost, která nastavuje barvu pozadí prvku.</p>
+    </div>
+
+    <div class="box" id="image-box">
+        <h2>background-image</h2>
+        <p>Nastaví obrázek jako pozadí. Standardně se opakuje (tile effect).</p>
+    </div>
+
+    <div class="box" id="no-repeat-box">
+        <h2>background-repeat: no-repeat</h2>
+        <p>Zabrání opakování obrázku na pozadí.</p>
+    </div>
+
+    <div class="box" id="size-cover-box">
+        <h2>background-size: cover</h2>
+        <p>Obrázek se roztáhne tak, aby pokryl celou plochu, i za cenu oříznutí.</p>
+    </div>
+
+    <div class="box" id="size-contain-box">
+        <h2>background-size: contain</h2>
+        <p>Obrázek se zobrazí celý, přizpůsobí se velikosti boxu, ale nemusí ho vyplnit celý.</p>
+    </div>
+
+    <div class="box" id="position-box">
+        <h2>background-position</h2>
+        <p>Umožňuje umístit neopakující se obrázek na konkrétní místo (např. `center top`).</p>
+    </div>
+
+    <div class="box" id="attachment-fixed-box">
+        <h2>background-attachment: fixed</h2>
+        <p>Pozadí zůstává na místě při rolování stránky (tzv. paralax efekt).</p>
+    </div>
+
+    <div class="box" id="multiple-bg-box">
+        <h2>Více obrázků na pozadí</h2>
+        <p>Do jedné vlastnosti lze vložit více obrázků a každý stylovat zvlášť.</p>
+    </div>
+
+    <div class="box" id="shorthand-box">
+        <h2>Zkratka: `background`</h2>
+        <p>Všechny vlastnosti lze zapsat do jedné pro přehlednější kód.</p>
+    </div>
+</main>
+</body>
+</html>
