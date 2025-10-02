@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+header div {
+    text-align: center;
+    color: ghostwhite;
+    background-image: url(https://images.unsplash.com/photo-1458150945447-7fb764c11a92?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    filter: brightness(0.5);
+}
+
+main {
+    width: 50%;
+    margin: auto;
+}
+
+main img {
+    max-width: 100%;
+    text-align: center;
+
+}
+
+#first_heading {
+    margin-top: 50px;
+    color: aqua;
+}
+
+main h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: hotpink;
+}
+
+main p {
+    padding-top: 20px;
+    max-width: 100%;
+    margin: auto;
+    text-align: left;
+}
