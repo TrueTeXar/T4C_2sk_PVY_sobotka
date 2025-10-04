@@ -30,29 +30,70 @@ main {
 }
 
 main img {
-    max-width: 100%;
-    text-align: center;
+    display: block;
+    max-width: 70%;
     height: auto;
+    margin: auto;
 }
 
 main h2 {
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 20px;
     color: hotpink;
+    max-width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .shadow_text {
     text-align: center;
     color: grey;
-    margin-top: 10px;
+    margin-top: 1px;
     margin-bottom: 40px;
 }
 
 main p {
     padding-top: 20px;
-    max-width: 100%;
+    max-width: 70%;
     margin: auto;
     text-align: left;
 }
 
+.full_text::first-letter {
+    font-size: xx-large;
+    font-weight: bold;
+    color: black;
+}
 
+main h3 {
+    margin: auto;
+    margin-top: 25px;
+    max-width: 70%;
+    font-weight: bold;
+}
+
+main ul {
+    margin: auto;
+    max-width: 60%;
+    margin-top: 20px;
+}
+
+main ul li {
+    margin: 5px;
+}
+
+
+main li::marker {
+    color: hotpink;
+}
+
+
+
+footer {
+    margin-top: 140px;
+    text-align: center;
+    border: 5px solid hotpink;
+    padding: 60px;
+    background-color: rgb(172, 123, 131);
+}
