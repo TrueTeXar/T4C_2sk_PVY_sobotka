@@ -97,3 +97,8 @@ footer {
     padding: 60px;
     background-color: rgb(172, 123, 131);
 }
+
+
+.wave {
+    text-decoration: underline wavy red;
+}
