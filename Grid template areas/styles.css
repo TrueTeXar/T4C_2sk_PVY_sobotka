@@ -1,0 +1,29 @@
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 40% 20% 10% 30%;
+
+    grid-template-areas:
+     "rewards manage manage manage"
+     "rewards goals goals lounges"
+     "card card FCA FCA"
+}
+
+
+#maximize-rewards {
+    grid-area: rewards;
+}
+
+#manage-cards {
+    grid-area: manage;
+}
+
+#credit-strategy {
+    grid-area: card;
+}
+
+
+
+
+
+
