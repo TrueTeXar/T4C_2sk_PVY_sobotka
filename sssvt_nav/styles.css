@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 
 header {
     background-color: #1a78b8;
@@ -13,21 +17,69 @@ header {
 
 .first_line {
     display: flex;
-
+    justify-content: center;
+    gap: 150px;
+    padding: 20px;
+    flex-wrap: nowrap;
 }
 
-.logo_box {
+.logo_box a {
+    max-width: 100%;
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
 
+.logo_box a:last-child {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: x-large;
 }
 
 
+.title_text_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-top: 20px;
+}
+
+.title_text_box p {
+    display: flex;
+    text-transform: uppercase;
+    font-size: x-large;
+}
+
+.xd_class {
+    padding-left: 130px;
+}
 
 .login_box {
+    max-width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: end;
     align-items: center;
+    gap: 10px;
 }
 
+.input_box {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
 
+body input {
+    width: 120px;
+    height: 30px;
+}
+
+.login_box p {
+    
+}
 
