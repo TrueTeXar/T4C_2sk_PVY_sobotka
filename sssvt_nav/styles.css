@@ -15,7 +15,7 @@ header {
 }
 
 .upper_part {
-    border-bottom: 2px solid rgb(59, 59, 163);
+    border-bottom: 2px solid rgb(0, 113, 205);
 }
 
 .first_line {
@@ -88,18 +88,18 @@ body input {
     flex-direction: row;
     gap: 50px;
     justify-content: start;
-    max-width: 70%;
+    max-width: 100%;
     margin: auto;
     padding: 20px;
 }
 
 .lower_part {
-    max-width: 70%;
+    max-width: 80%;
     margin: auto;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    gap: 400px;
+    justify-content: center;
+    gap: 250px;
 }
 
 .info_part {
@@ -108,4 +108,14 @@ body input {
     flex-direction: row;
     justify-content: end;
     padding: 20px;
+    
+}
+
+
+.lower_part li {
+    text-transform: uppercase;
+    list-style: none;
+    white-space: nowrap;
+    padding: 5px;
+    border-left: 3px solid rgb(194, 194, 0);
 }
