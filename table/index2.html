@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper {
+            max-width: 100vw;
+            overflow-x: scroll ;
+        }
+        table {
+            width: 100%;
+            min-width: 900px;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        table, th, td {
+            border: 1px solid;
+            padding: 4px 6px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: bisque;
+        }
+
+        @media only screen and (max-width: 786px) {
+            .wrapper {
+                overflow: hidden;
+            }
+
+            table, th, td {
+            border: none;
+           }
+           
+            table {
+                display: block;
+                width: 100%;
+                min-width: initial;
+            }
+
+            thead {
+                display: none;
+            }
+
+            tbody tr {
+                display: block;
+                margin-bottom: 15px;
+                border: solid 1px black;
+                border-radius: 8px;
+            }
+
+            tbody td {
+                display: block;
+                border-bottom: solid 1px black;
+                position: relative;
+                padding: 10px 10px 10px 50%;
+            }
+
+            tbody td::before {
+                content: attr(data-label);
+                    position: absolute;
+                    left: 10px;
+                    width: 45%;
+                    text-align: left;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <main class="wrapper">
+         <table>
+            <thead>
+                <tr>
+                    <th>Lekce</th>
+                    <th>Datum</th>
+                    <th>Název hodiny</th>
+                    <th>Shrnutí</th>
+                    <th>Obsah sylabu</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td data-label="Lekce">25–26</td>
+                <td data-label="Datum">2025-10-30</td>
+                <td data-label="Název hodiny">25–26: Tabulky v HTML+CSS, stylování seznamů</td>
+                <td data-label="Shrnutí">Stylování tabulek, stylování seznamů</td>
+                <td data-label="Obsah sylabu">Tabulky v HTML+CSS, stylování seznamů</td>
+            </tr>
+            <tr>
+                <td data-label="Lekce">23–24</td>
+                <td data-label="Datum">2025-10-23</td>
+                <td data-label="Název hodiny">23–24: Responsivita v CSS</td>
+                <td data-label="Shrnutí">Responsivita v CSS, základní úvod</td>
+                <td data-label="Obsah sylabu">Responsivita v CSS, základní úvod</td>
+            </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
