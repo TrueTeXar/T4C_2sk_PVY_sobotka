@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+div > p {
+    color: blueviolet;
+    font-weight: bold;
+    padding: 30px;
+    border: 6px solid white;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.grid {
+    max-width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 20px;
+}
+
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.item2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.item5 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.item3 {
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+
+.item9 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.item9 {
+    padding: 150px;
+    background-image: url(https://cdn3.emoji.gg/emojis/38439-sus.png);
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+}
