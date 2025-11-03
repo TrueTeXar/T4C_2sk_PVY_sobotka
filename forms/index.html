@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            display: block;
+            margin: 20px;
+        }
+
+        .flex_row_gap_sm div {
+            display: inline;
+        }
+
+        button {
+            width: 20%;
+        }
+
+        input:invalid {
+            background-color: coral;
+        }
+
+        input:not(:invalid) {
+            background-color: greenyellow;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="#" method="post">
+        <div class="first_input">
+              <label for="name">Jméno</label>
+        <input id="name" type="text">
+        </div>
+      
+        <div class="second_input">
+            <label for="address">Adresa</label>
+        <input id="address" type="text" name="address">
+        </div>
+
+        <div class="email_input">
+            <label for="email">Email</label>
+        <input id="email" type="email" name="email">
+        </div>
+
+        <div class="ks_input">
+            <label for="quant">Počet ks</label>
+        <input id="quant" type="number" name="quant" min="1" max="20">
+        </div>
+
+
+        <div class="flex_row_gap_sm">
+            <div>
+                <label for="size_sm">Malá</label>
+                <input id="size_sm" type="radio" name="size" value="sm">
+            </div>
+
+            <div>
+                 <label for="size_base">Základní</label>
+                <input id="size_base" type="radio" name="size" value="base">
+            </div>
+
+            <div>
+                 <label for="size_lg">Large</label>
+                <input id="size_lg" type="radio" name="size" value="lg">
+            </div>
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type="password">
+        </div>
+        <button type="submit">Odeslat</button>
+    </form>
+</body>
+</html>
