@@ -11,15 +11,15 @@
 
 
 #maximize-rewards {
-    grid-area: rewards;
+    grid-area: header;
 }
 
 #manage-cards {
-    grid-area: manage;
+    grid-area: sidebar;
 }
 
 #credit-strategy {
-    grid-area: card;
+    grid-area: main;
 }
 
 

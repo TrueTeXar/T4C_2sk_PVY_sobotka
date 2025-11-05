@@ -12,7 +12,7 @@ div > p {
     color: blueviolet;
     font-weight: bold;
     padding: 30px;
-    border: 6px solid white;
+    border: 6px solid rgb(48, 48, 48);
     text-align: center;
     border-radius: 30px;
 }
@@ -21,7 +21,7 @@ div > p {
     max-width: 60%;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /*grid-template-columns: 1fr 1fr;*/
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 80px;
     grid-row-gap: 20px;
@@ -60,3 +60,45 @@ div > p {
     background-size: cover;
     max-width: 100%;
 }
+
+
+.grid2 {
+    margin: auto;
+    margin-top: 200px;
+    border: 5px solid royalblue;
+    width: 50%;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.code_alch {
+    display: block;
+    width: 30%;
+    border-radius: 20px;
+}
+
+
+.grid2 li {
+    font-size: x-large;
+    text-transform: uppercase;
+    font-weight: bold;
+    list-style: none;
+    padding: 40px;
+    color: grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+
+}
+
+.grid2 {
+    display: flex;
+}
+
+.grid2 ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10%;
+}
+
