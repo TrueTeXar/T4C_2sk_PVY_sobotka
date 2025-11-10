@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+}
+
+header {
+    background: linear-gradient(to bottom, #2e1812, #5b4843, white);
+}
+
+.logo > img {
+    padding: 20px;
+    display: block;
+}
+
+.logo {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    justify-content: center;
+}
+
+
+#title_heading {
+    margin-top: 30px;
+}
