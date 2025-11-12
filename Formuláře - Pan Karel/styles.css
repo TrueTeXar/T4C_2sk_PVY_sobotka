@@ -4,8 +4,8 @@
     padding: 0;
 }
 
-html {
-
+body {
+    font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -27,4 +27,183 @@ header {
 
 #title_heading {
     margin-top: 30px;
+    text-align: center;
+    /*border-top: 4px solid #766662;*/
+    border-bottom: 4px solid #766662;
+}
+
+
+
+
+main form {
+    margin-top: 50px;
+}
+
+
+
+
+
+/*styles for upper_data div for form*/
+
+
+.upper_data_name {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.upper_data_name > input {
+    width: 80%;
+    margin: auto;
+    padding: 5px;
+    font-size: x-large;
+    border: 3px solid #f25a23;
+    border-radius: 10px;
+}
+
+.upper_data_name > input:hover {
+    border: 5px solid #f25a23;
+    border-radius: 10px;
+}
+
+
+.upper_data_name > label {
+    width: 80%;
+    margin: auto;
+    font-size: larger;
+}
+
+
+
+.upper_data_surname {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.upper_data_surname > input {
+    width: 80%;
+    margin: auto;
+    padding: 5px;
+    font-size: x-large;
+    border: 3px solid #f25a23;
+    border-radius: 10px;
+}
+
+.upper_data_surname > input:hover {
+    border: 5px solid #f25a23;
+    border-radius: 10px;
+}
+
+.upper_data_surname > label {
+    width: 80%;
+    margin: auto;
+    font-size: larger;
+}
+
+
+
+
+
+
+
+/* Styles for address_data div for form*/
+
+.address_data_street {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.real_data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.address_data_street > input {
+    width: 80%;
+    margin: auto;
+    padding: 5px;
+    font-size: x-large;
+    border: 3px solid #5b4843;
+    border-radius: 10px;
+}
+
+.address_data_street > input:hover {
+    border: 5px solid #5b4843;
+    border-radius: 10px;
+}
+
+
+
+.address_data_street > label {
+    width: 80%;
+    margin: auto;
+    font-size: larger;
+}
+
+
+
+
+
+.address_data_housenumber {
+    display: flex;
+    flex-direction: column;
+}
+
+.address_data_housenumber > input {
+    width: 80%;
+    margin: auto;
+    padding: 5px;
+    font-size: x-large;
+    border: 3px solid #5b4843;
+    border-radius: 10px;
+}
+
+.address_data_housenumber > input:hover {
+    border: 5px solid #5b4843;
+    border-radius: 10px;
+}
+
+.address_data_housenumber > label {
+    width: 80%;
+    margin: auto;
+    font-size: larger;
+}
+
+
+
+
+
+.address_data_town {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.address_data_town > input {
+      width: 80%;
+    margin: auto;
+    padding: 5px;
+    font-size: x-large;
+    border: 3px solid #5b4843;
+    border-radius: 10px;
+}
+
+.address_data_town > input:hover {
+    border: 5px solid #5b4843;
+    border-radius: 10px;
+}
+
+.address_data_town > label {
+        width: 80%;
+    margin: auto;
+    font-size: larger;
+}
+
+.real_data {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

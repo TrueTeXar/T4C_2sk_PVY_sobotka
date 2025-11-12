@@ -3,6 +3,9 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -14,6 +17,45 @@
 
     <main>
         <h1 id="title_heading">Objednávky</h1>
+
+        <form action="#" method="post">
+            <div class="upper_data">
+                <div class="upper_data_name">
+                    <label for="name">Jméno</label>
+                    <input id="name" type="text">
+                </div>
+
+                <div class="upper_data_surname">
+                    <label for="surname">Příjmení</label>
+                    <input id="surname" type="text">
+                </div>
+            </div>
+
+            <div class="address_data">
+                <fieldset>
+                    <legend>Fakturační adresa</legend>
+
+
+                  <div class="real_data">
+
+                    <div class="address_data_street">
+                        <label for="street">Ulice</label>
+                        <input id="street" type="text">
+                    </div>
+
+                    <div class="address_data_housenumber">
+                        <label for="housenumber">Č. popisné</label>
+                        <input id="housenumber" type="text">
+                    </div>
+
+                    <div class="address_data_town">
+                        <label for="town">Město</label>
+                        <input id="town" type="text">
+                    </div>
+                  </div>
+                </fieldset>
+            </div>
+        </form>
     </main>
 
     <footer>
