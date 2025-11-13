@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --space-sm: 1rem;
+    --space-md:1rem;
+    --space-lg:1.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+
+.gap-sm {
+    gap: var(--space-sm);
+}
+
+
+.gap-sm {
+    gap: var(--space-md);
+}
+
+.gap-lg {
+    gap: var(--space-lg);
+}
+
+
+form {
+    width: 30%;
+    margin: auto;
+    padding: var(--space-lg);
+}
+
+.input-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.input-box > label {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.input-box > input::placeholder {
+    font-style: italic;
+}
+
+.input-box > label:has(+ input:required)::after {
+    content: "*";
+    color: red;
+    margin-left: 0.2rem;
+}
+
+.form-validation {
+    border: solid 1px red;
+    padding: var(--space-sm);
+    background-color: coral;
+    color: white;
+
+    display: none;
+}
+
+.form-validation > ul {
+    list-style-position: inside;
+}
+
+form:has(input:user-invalid) .form-validation {
+    display: block;
+}
+
+.form-validation > ul > li {
+    display: none;
+}
+
+form:has(input[name="first_name"]:user-invalid) .fname-invalid {
+    display: list-item;
+}
+
+
+input:focus {
+    outline: solid 2px cadetblue;
+    border-radius: 5px;
+}
+
+

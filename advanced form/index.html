@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post" class="flex flex-column gap-lg">
+        <div class="flex flex-row gap-sm">
+            <div class="input-box">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" required>
+            </div>
+
+            <div class="input-box">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Enter your last name" required>
+            </div>
+        </div>
+
+
+        <div>
+            <button>submit </button>
+        </div>
+
+        <div class="form-validation">
+            <h3>The form has the following errors</h3>
+            <ul>
+                <li class="fname-invalid">First Name is required.</li>
+                <li class="lname-invalid">Last name is required.</li>
+            </ul>
+        </div>
+    </form>
+</body>
+</html>
