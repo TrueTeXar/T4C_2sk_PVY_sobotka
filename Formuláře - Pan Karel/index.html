@@ -32,7 +32,7 @@
             </div>
 
             <div class="address_data">
-                <fieldset>
+                <fieldset class="fieldset_norm">
                     <legend>Fakturační adresa</legend>
 
 
@@ -55,11 +55,50 @@
                   </div>
                 </fieldset>
             </div>
+
+            <div class="contact_data">
+                <div class="contact_data_email">
+                    <label for="email">Email</label>
+                    <input id="email" type="text">
+                </div>
+                <div class="contact_data_tel">
+                    <label for="tel">Tel.</label>
+                    <input id="tel" type="text">
+                </div>
+            </div>
+
+            <div class="delivery_data">
+                <fieldset class="fieldset_norm">
+                    <legend>Dodání</legend>
+                    
+                    <div class="delivery_data_personal">
+                        <input id="personal" type="radio">
+                        <label for="personal">Osobní odběr P-Karlín</label>
+                    </div>
+
+                    <div class="delivery_data_personal">
+                        <input id="ppl" type="radio">
+                        <label for="ppl">PPL (+ 50 Kč)</label>
+                    </div>
+
+                    <div class="delivery_data_personal">
+                        <input id="dpd" type="radio">
+                        <label for="dpd">DPD (+ 10 Kč)</label>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <div class="button_part">
+                <button type="reset">RESET</button>
+                <button type="submit">ODESLAT</button>
+            </div>
         </form>
     </main>
 
     <footer>
-
+        <p>Nerd's Coffee & Co. s.r.o.</p>
+        <p>Lahovcova 245/5, Praha 18 - Bubny, 158 00</p>
     </footer>
 </body>
 </html>
