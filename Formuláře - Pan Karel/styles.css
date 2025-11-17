@@ -39,7 +39,10 @@ main form {
     margin-top: 50px;
 }
 
-
+::placeholder {
+    font-size: small;
+    font-style: italic;
+}
 
 
 

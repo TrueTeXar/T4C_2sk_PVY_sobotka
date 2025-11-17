@@ -18,16 +18,16 @@
     <main>
         <h1 id="title_heading">Objednávky</h1>
 
-        <form action="#" method="post">
+        <form action="https://nerds-coffee.co/order/neworder.php" method="post">
             <div class="upper_data">
                 <div class="upper_data_name">
                     <label for="name">Jméno</label>
-                    <input id="name" type="text">
+                    <input id="name" type="text" name="first_name">
                 </div>
 
                 <div class="upper_data_surname">
                     <label for="surname">Příjmení</label>
-                    <input id="surname" type="text">
+                    <input id="surname" type="text" name="last_name">
                 </div>
             </div>
 
@@ -40,17 +40,17 @@
 
                     <div class="address_data_street">
                         <label for="street">Ulice</label>
-                        <input id="street" type="text">
+                        <input id="street" type="text" name="street">
                     </div>
 
                     <div class="address_data_housenumber">
                         <label for="housenumber">Č. popisné</label>
-                        <input id="housenumber" type="text">
+                        <input id="housenumber" type="text" name="housenumber">
                     </div>
 
                     <div class="address_data_town">
                         <label for="town">Město</label>
-                        <input id="town" type="text">
+                        <input id="town" type="text" name="town">
                     </div>
                   </div>
                 </fieldset>
@@ -59,11 +59,11 @@
             <div class="contact_data">
                 <div class="contact_data_email">
                     <label for="email">Email</label>
-                    <input id="email" type="text">
+                    <input id="email" type="email" name="email" placeholder="email ve tvaru: example@domain.org">
                 </div>
                 <div class="contact_data_tel">
                     <label for="tel">Tel.</label>
-                    <input id="tel" type="text">
+                    <input id="tel" type="tel" name="telephone_number">
                 </div>
             </div>
 
@@ -72,17 +72,17 @@
                     <legend>Dodání</legend>
                     
                     <div class="delivery_data_personal">
-                        <input id="personal" type="radio">
+                        <input id="personal" type="radio" name="delivery_type">
                         <label for="personal">Osobní odběr P-Karlín</label>
                     </div>
 
                     <div class="delivery_data_personal">
-                        <input id="ppl" type="radio">
+                        <input id="ppl" type="radio" name="delivery_type">
                         <label for="ppl">PPL (+ 50 Kč)</label>
                     </div>
 
                     <div class="delivery_data_personal">
-                        <input id="dpd" type="radio">
+                        <input id="dpd" type="radio" name="delivery_type">
                         <label for="dpd">DPD (+ 10 Kč)</label>
                     </div>
                 </fieldset>
