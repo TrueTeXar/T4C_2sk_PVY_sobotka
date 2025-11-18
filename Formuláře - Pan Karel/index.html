@@ -22,12 +22,14 @@
             <div class="upper_data">
                 <div class="upper_data_name">
                     <label for="name">Jméno</label>
-                    <input id="name" type="text" name="first_name">
+                    <input id="name" type="text" name="first_name" required>
+                    <p class="error">požadováno</p>
                 </div>
 
                 <div class="upper_data_surname">
                     <label for="surname">Příjmení</label>
-                    <input id="surname" type="text" name="last_name">
+                    <input id="surname" type="text" name="last_name" required>
+                    <p class="error">požadováno</p>
                 </div>
             </div>
 
@@ -40,17 +42,20 @@
 
                     <div class="address_data_street">
                         <label for="street">Ulice</label>
-                        <input id="street" type="text" name="street">
+                        <input id="street" type="text" name="street" required>
+                        <p class="error">požadováno</p>
                     </div>
 
                     <div class="address_data_housenumber">
                         <label for="housenumber">Č. popisné</label>
-                        <input id="housenumber" type="text" name="housenumber">
+                        <input id="housenumber" type="text" name="housenumber" required>
+                        <p class="error">požadováno</p>
                     </div>
 
                     <div class="address_data_town">
                         <label for="town">Město</label>
-                        <input id="town" type="text" name="town">
+                        <input id="town" type="text" name="town" required>
+                        <p class="error">požadováno</p>
                     </div>
                   </div>
                 </fieldset>
@@ -59,11 +64,13 @@
             <div class="contact_data">
                 <div class="contact_data_email">
                     <label for="email">Email</label>
-                    <input id="email" type="email" name="email" placeholder="email ve tvaru: example@domain.org">
+                    <input id="email" type="email" name="email" placeholder="email ve tvaru: example@domain.org" required>
+                    <p class="error">požadováno</p>
                 </div>
                 <div class="contact_data_tel">
                     <label for="tel">Tel.</label>
-                    <input id="tel" type="tel" name="telephone_number">
+                    <input id="tel" type="tel" name="telephone_number" pattern="(\+420)[0-9]{9}" placeholder="ve tvaru: +420111222333">
+                    <p class="error">Musí splňovat formát</p>
                 </div>
             </div>
 
@@ -73,16 +80,16 @@
                     
                     <div class="delivery_data_personal">
                         <input id="personal" type="radio" name="delivery_type">
-                        <label for="personal">Osobní odběr P-Karlín</label>
+                        <label for="personal">Osobní odběr P-Karlín</label required>
                     </div>
 
                     <div class="delivery_data_personal">
-                        <input id="ppl" type="radio" name="delivery_type">
+                        <input id="ppl" type="radio" name="delivery_type" required>
                         <label for="ppl">PPL (+ 50 Kč)</label>
                     </div>
 
                     <div class="delivery_data_personal">
-                        <input id="dpd" type="radio" name="delivery_type">
+                        <input id="dpd" type="radio" name="delivery_type" required>
                         <label for="dpd">DPD (+ 10 Kč)</label>
                     </div>
                 </fieldset>
