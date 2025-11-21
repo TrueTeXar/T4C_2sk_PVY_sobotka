@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*common styles for devices with width less than 768px (homepage.html, demand.html, detail.html)*/
+
+header .upper_nav_line {
+    background-color: #304068;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.upper_nav_line ul {
+    display: flex;
+    gap: 10px;
+}
+
+.upper_nav_line ul {
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+#second_point {
+    border-left: 1px solid white;
+    padding-left: 10px;
+}
+
+
+.bottom_nav_line {
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reffs_div {
+    display: flex;
+    gap: 20px;
+}
+
+
+.select_grid {
+    color: #b4bed5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+
+.boys {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 2px solid #b4bed5;
+    padding: 20px;
+}
+
+
+.girls {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 2px solid #b4bed5;
+    padding: 20px;
+}
+
+.others_in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #b4bed5;
+    padding: 20px;
+}
