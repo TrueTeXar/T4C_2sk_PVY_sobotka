@@ -85,3 +85,141 @@ header .upper_nav_line {
     border: 2px solid #b4bed5;
     padding: 20px;
 }
+
+
+.promo_box {
+    padding-top: 50px;
+    background-color: rgb(220, 220, 220);
+}
+
+.promo_box > h2 {
+    color: black;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.promo_box > p {
+    color: #606060;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.email_box {
+    position: relative;
+    display: flex;
+    width: 340px;
+    border: 1px solid #d5d5d6;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+.email_box > img {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-190%);
+    width: 20px;
+}
+
+.email_box input {
+    flex: 1;
+    padding: 12px 12px 12px 12px;
+    border: none;
+    background-color: rgb(236, 236, 236);
+    font-size: 14px;
+}
+
+.email_box button {
+    background-color: #c7232f;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.email_box input::placeholder {
+    padding: 30px;
+}
+
+
+.upper_info_passage {
+    background-color: #c7232f;
+    padding-bottom: 50px;
+}
+
+
+.upper_info_passage h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 50px 10px;
+}
+
+.upper_info_passage p {
+    text-align:justify;
+    max-width: 80%;
+    padding-left: 10px;
+}
+
+.upper_info_passage img {
+    padding: 50px 10px;
+}
+
+.girl_products h4 {
+    padding: 10px;
+}
+
+.girl_products ul {
+    list-style:circle;
+    padding-left: 50px;
+}
+
+.girl_products ul li {
+    padding: 5px 0px;
+}
+
+
+.products {
+    display: flex;
+    gap: 30%;
+}
+
+
+.lower_info_passage {
+    background-color: #304068;
+}
+
+.lower_info_passage img {
+    padding: 0 10px;
+}
+
+.card {
+    display: flex;
+}
+
+.lower_box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+}
+
+.lower_info_passage h3 {
+    padding: 50px 10px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.socials {
+    padding: 30px 10px;
+}
+
+
+.lower_info_passage > p {
+    padding: 30px 10px;
+}
