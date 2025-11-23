@@ -9,7 +9,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*common styles for devices with width less than 768px (homepage.html, demand.html, detail.html)*/
+/*common styles for devices with width less than 992px (homepage.html, demand.html, detail.html)*/
 
 header .upper_nav_line {
     background-color: #304068;
@@ -222,4 +222,85 @@ header .upper_nav_line {
 
 .lower_info_passage > p {
     padding: 30px 10px;
+}
+
+
+
+
+
+/*styles for devices with minimum width 992px*/
+
+@media screen and (min-width: 992px) {
+    .upper_nav_line ul {
+        padding-left: 10%;
+    }
+
+    .upper_nav_line img {
+        padding-right: 10%;
+    }
+
+    .bottom_nav_line {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .select_grid {
+        max-width: 80%;
+        margin: auto;
+        display: flex;
+    }
+
+    .select_grid > div {
+        width: 25%;
+    }
+
+    .promo_box h2 {
+        width: 50%;
+        margin: auto;
+        font-size: 1.8rem;
+        padding-top: 50px;
+    }
+
+    .promo_box > p {
+        width: 60%;
+        margin: auto;
+        margin-top: 15px;
+        font-size: 1.3rem;
+    }
+
+    .email_box {
+        width: 30%;
+        margin: auto;
+        margin-top: 20px;
+        padding-bottom: 100px;
+    }
+
+    .email_box > img {
+        transform: translateY(-410%);
+    }
+
+    .for_flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .lower_info_passage {
+        width: 30%;
+    }
+
+    .upper_info_passage {
+        width: 70%;
+    }
+
+    .upper_info_passage {
+        display: flex;
+    }
+
+    .part1 {
+        width: 50%;
+    }
+
+    .part1 > img {
+        margin-top: 10%;
+    }
 }
