@@ -14,9 +14,135 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    padding: 25% 5%;
+}
+
+.upper_demand_selection2 {
+    width: 95%;
+    margin: auto;
+    background-image: url(../img/02.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 25% 5%;
+}
+
+.upper_demand_selection3 {
+    width: 95%;
+    margin: auto;
+    background-image: url(../img/03-01.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 25% 5%;
 }
 
 
-.upper_demand_selection p {
-    padding: 50% 20%;
+.upper_demand_selection > p {
+    text-transform: uppercase;
+    color: #304068;
+    font-size: 1.8rem;
 }
+
+.upper_demand_selection2 > p {
+    text-transform: uppercase;
+    color: #c7232f;
+    text-decoration: underline;
+    font-size: 1.8rem;
+}
+
+
+.upper_demand_selection3 > p {
+    text-transform: uppercase;
+    color: #304068;
+    font-size: 1.8rem;
+}
+
+
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #b4bed5;
+}
+
+.demand_heading h1 {
+    color: #c7232f;
+    text-align: center;
+    font-weight: normal;
+    font-size: 2.5rem;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.demand_heading h1 span {
+    color: #304068;
+    font-weight: bold;
+}
+
+
+
+/*the damand list in main root styles*/
+
+.demand_list {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.flex_item {
+    max-width: 85%;
+    margin: auto;
+    border: 1px solid #b4bed5;
+}
+
+.img_uni_style {
+    max-width: 100%;
+}
+
+
+.flex_item_info_div {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.flex_item_info_div .kosik {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+
+.flex_item_info_div p {
+    font-size: 1.6rem;
+    padding-left: 5%;
+    color: #c7232f;
+}
+
+
+.second_prize {
+    color: #b4bed5!important;
+}
+
+
+.middle_text {
+    font-size: 1.4rem;
+    padding-left: 5%;
+    color: #304068;
+    max-width: 80%;
+}
+
+.flex_item a {
+    text-decoration: none;
+}
+
+
