@@ -225,7 +225,9 @@ header .upper_nav_line {
 }
 
 
-
+#last_contact {
+    display: none;
+}
 
 
 /*styles for devices with minimum width 992px*/
@@ -302,5 +304,13 @@ header .upper_nav_line {
 
     .part1 > img {
         margin-top: 10%;
+    }
+
+    #last_contact {
+    display: block;
+    }
+
+    #last_contact {
+        display: flex;
     }
 }

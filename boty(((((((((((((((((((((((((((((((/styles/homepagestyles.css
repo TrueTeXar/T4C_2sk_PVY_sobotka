@@ -1,0 +1,22 @@
+/*common styles for devices with width less than 992px*/
+
+
+.upper_demand {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.upper_demand_selection {
+    width: 95%;
+    margin: auto;
+    background-image: url(../img/01.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+.upper_demand_selection p {
+    padding: 50% 20%;
+}
