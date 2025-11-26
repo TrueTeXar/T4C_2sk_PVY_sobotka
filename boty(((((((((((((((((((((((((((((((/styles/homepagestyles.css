@@ -1,9 +1,12 @@
 /*common styles for devices with width less than 992px*/
 
+* {
+    box-sizing: border-box;
+}
 
 .upper_demand {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 
@@ -201,3 +204,71 @@
     margin: 50px auto;
 }
 
+.banner_boss {
+    display: none;
+}
+
+/*styles for devices with minimum width 992px*/
+
+@media screen and (min-width: 992px) {
+
+    main {
+        width: 80%;
+        margin: auto;
+    }
+
+    .banner_boss {
+        display: block;
+        background-image: url(../myAssets/banner.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 10%;
+        padding-left: 50%;
+        width: 100%;
+        margin: auto;
+    }
+
+    .banner_boss .pink {
+        font-size: x-large;
+        text-transform: uppercase;
+        color: #c7232f;
+    }
+
+    .banner_boss .blue {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: #304068;
+        font-weight: bold;
+    }
+
+    .banner_boss button {
+        padding: 10px 20px;
+        color: white;
+        border: none;
+        border-radius: 1px;
+        background-color: #c7232f;
+        font-size: medium;
+        max-width: fit-content;
+    }
+
+    .banner_boss {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .upper_demand {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .upper_demand > div {
+        padding: 8% 5%;
+    }
+
+    .upper_demand > div > p {
+        
+    }
+}
