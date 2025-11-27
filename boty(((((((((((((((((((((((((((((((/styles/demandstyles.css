@@ -1,0 +1,110 @@
+/*styles for devices less than 992px*/
+
+.promo_box {
+    display: none;
+}
+
+main > h1 {
+    padding: 10px;
+    margin: auto;
+    color: #304068;
+    font-size: 2rem;
+}
+
+main > p {
+    padding: 10px;
+    margin: auto;
+    color: #304068;
+    font-size: 1.3rem;
+}
+
+main form {
+    padding: 10px;
+    margin: auto;
+}
+
+.entity_part {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.entity_part_attribute > label {
+    color: #304068;
+    font-size: 1.2rem;
+}
+
+.entity_part_attribute {
+    display: flex;
+    flex-direction: column;
+}
+
+.entity_part_attribute > input {
+    padding: 15px 10px;
+    font-size: 1.2rem;
+    border: 1px solid #c2c2c2;
+}
+
+main .entity_part_attribute input::placeholder {
+    font-style: italic;
+    color: #d9dbe0;
+}
+
+.entity_part_attribute > select {
+    padding: 15px 10px;
+    font-size: 1.2rem;
+}
+
+main h2 {
+    color: #304068;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.payment_type {
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 10px;
+
+}
+
+.payment_type_item label {
+    color: #304068;
+    font-size: 1.2rem;
+}
+
+.payment_type_item input {
+    scale: calc(1.8);
+}
+
+.payment_type_item {
+    display: flex;
+    gap: 20px;
+}
+
+.submits a {
+    text-decoration: none;
+    color: #304068;
+    border: 2px solid #c7232f;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+
+}
+
+.submits button {
+    color: white;
+    padding: 20px 45px;
+    background-color: #c7232f;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.submits {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
