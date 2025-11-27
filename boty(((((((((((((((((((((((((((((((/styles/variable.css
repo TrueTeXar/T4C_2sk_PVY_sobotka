@@ -89,7 +89,10 @@ header .upper_nav_line {
 
 .promo_box {
     padding-top: 50px;
-    background-color: rgb(220, 220, 220);
+    background-image: url(../myAssets/Vrstva\ 9.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .promo_box > h2 {
@@ -109,7 +112,7 @@ header .upper_nav_line {
     position: relative;
     display: flex;
     width: 340px;
-    border: 1px solid #d5d5d6;
+    /*border: 1px solid #d5d5d6;*/
     width: 90%;
     margin: auto;
     margin-top: 20px;
@@ -128,7 +131,7 @@ header .upper_nav_line {
     flex: 1;
     padding: 12px 12px 12px 12px;
     border: none;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(204, 204, 204);
     font-size: 14px;
 }
 
