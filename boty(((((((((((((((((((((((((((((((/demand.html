@@ -47,59 +47,64 @@
         </div>
     </header>
     <main>
-        <!--main space ready for the content-->
-        <h1>Poptávkový formulář</h1>
-        <p>Vyplňte formulář níže a my se Vám ozveme, jakmile to půjde.</p>
+        <div id="image_for_respon" class="main_flex_item">
+            <img src="myAssets/Vrstva 867.png" alt="invisible_frame">
+        </div>
+        <div class="main_flex_item">
+            <h1>Poptávkový formulář</h1>
+            <p>Vyplňte formulář níže a my se Vám ozveme, jakmile to půjde.</p>
 
-        <form action="demand.php" method="post">
-            <div class="entity_part">
-                <div class="entity_part_attribute">
-                    <label for="name">Jméno</label>
-                    <input id="name" type="text" name="name" required placeholder="Zadejte své jméno...">
+            <form action="demand.php" method="post">
+                <div class="entity_part">
+                  <div class="name_flex"> 
+                    <div class="entity_part_attribute">
+                        <label for="name">Jméno</label>
+                        <input id="name" type="text" name="name" required placeholder="Zadejte své jméno...">
+                    </div>
+                    <div class="entity_part_attribute">
+                        <label for="surname">Příjmení</label>
+                        <input id="surname" type="text" name="surname" required placeholder="Zadejte své příjmení...">
+                    </div>
+                  </div>   
+                    <div class="entity_part_attribute">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" required placeholder="Zadejte svůj e-mail...">
+                    </div>
+                    <div class="entity_part_attribute">
+                        <label for="telephone">Telefon</label>
+                        <input id="telephone" type="tel" name="telephone" required placeholder="Zadejte svůj telefon...">
+                    </div>
+                    <div class="entity_part_attribute">
+                        <label for="country">Země</label>
+                        <select name="country" id="country" required>
+                            <option id="invisible" value="" disabled selected hidden>Vyber zemi</option>
+                            <option value="country">Česká republika</option>
+                            <option value="country">Slovenská republika</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="entity_part_attribute">
-                    <label for="surname">Příjmení</label>
-                    <input id="surname" type="text" name="surname" required placeholder="Zadejte své příjmení...">
+                <h2>Způsob platby</h2>
+                <div class="payment_type">
+                    <div class="payment_type_item">
+                        <input id="cash" type="radio" name="payment">
+                        <label for="cash">Hotově</label>
+                    </div>
+                    <div class="payment_type_item">
+                        <input id="card" type="radio" name="payment">
+                        <label for="card">Katrou</label>
+                    </div>
+                    <div class="payment_type_item">
+                        <input id="transition" type="radio" name="payment">
+                        <label for="transition">Převodem</label>
+                    </div>
                 </div>
-                <div class="entity_part_attribute">
-                    <label for="email">E-mail</label>
-                    <input id="email" type="email" name="email" required placeholder="Zadejte svůj e-mail...">
-                </div>
-                <div class="entity_part_attribute">
-                    <label for="telephone">Telefon</label>
-                    <input id="telephone" type="tel" name="telephone" required placeholder="Zadejte svůj telefon...">
-                </div>
-                <div class="entity_part_attribute">
-                    <label for="country">Země</label>
-                    <select name="country" id="country" required>
-                        <option id="invisible" value="" disabled selected hidden>Vyber zemi</option>
-                        <option value="country">Česká republika</option>
-                        <option value="country">Slovenská republika</option>
-                    </select>
-                </div>
-            </div>
 
-            <h2>Způsob platby</h2>
-            <div class="payment_type">
-                <div class="payment_type_item">
-                    <input id="cash" type="radio" name="payment">
-                    <label for="cash">Hotově</label>
+                <div class="submits">
+                    <a href="homepage.html">zpět</a>
+                    <button>>Pokračovat</button>
                 </div>
-                <div class="payment_type_item">
-                    <input id="card" type="radio" name="payment">
-                    <label for="card">Katrou</label>
-                </div>
-                <div class="payment_type_item">
-                    <input id="transition" type="radio" name="payment">
-                    <label for="transition">Převodem</label>
-                </div>
-            </div>
-
-            <div class="submits">
-                <a href="homepage.html">zpět</a>
-                <button>>Pokračovat</button>
-            </div>
-        </form>
+            </form>
+        </div> 
     </main>
     <footer>
         <div class="promo_box">

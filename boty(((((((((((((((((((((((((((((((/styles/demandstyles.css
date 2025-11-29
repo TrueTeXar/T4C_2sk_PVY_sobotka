@@ -4,14 +4,14 @@
     display: none;
 }
 
-main > h1 {
+main div > h1 {
     padding: 10px;
     margin: auto;
     color: #304068;
     font-size: 2rem;
 }
 
-main > p {
+main div > p {
     padding: 10px;
     margin: auto;
     color: #304068;
@@ -102,9 +102,53 @@ main h2 {
     border: none;
 }
 
+#image_for_respon {
+    display: none;
+}
+
 .submits {
     margin-top: 50px;
     margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
+}
+
+.name_flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #image_for_respon {
+        display: block;
+    }
+
+    .main_flex_item {
+        width: 50%;
+        height: auto;
+    }
+
+    .main_flex_item {
+        width: 100%;
+    }
+
+    .name_flex {
+        display: flex;
+        gap: 30px;
+        flex-direction: row;
+    }
+
+
+    .payment_type {
+        display: flex;
+        justify-content: space-between;
+    }
 }
