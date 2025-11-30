@@ -1,0 +1,177 @@
+/*styles for devices with width less than 992px*/
+
+.main_boot img {
+    max-width: 100%;
+    border: 2px solid #b4bed5;
+}
+
+.main_boot {
+    padding: 10px;
+    margin: auto;
+}
+
+.aside_boots {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.aside_boots img {
+    max-width: 30%;
+    border: 2px solid #b4bed5;
+}
+
+.upper_heading_container img {
+    display: none;
+}
+
+.upper_heading_container > h1 {
+    color: #304068;
+    padding-bottom: 15px;
+}
+
+.upper_heading_container {
+    border-bottom: 1px solid #b4bed5;
+    margin-bottom: 30px;
+}
+
+.right_upper_container {
+    padding: 10px;
+}
+
+.no_seen_ever_text_xdddddd {
+    color: #c4ccde;
+    display: none;
+}
+
+
+
+
+
+
+/*colors in demand*/
+.details p {
+    color: #304068;
+    font-weight: bold;
+}
+
+.details_color > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.color {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #b4bed5;
+    display: inline-block;
+}
+
+.color_blue {background-color: #304068;}
+.color_black {background-color: black;}
+.color_red {background-color: #c7232f;}
+.color_green {background-color: #acd373;}
+
+.color.active {
+    border-color: #c7232f;
+}
+
+
+
+
+
+
+
+/*sizes in demand*/
+.details_size div {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.details_size div > p {
+    font-size: 1.2rem;
+}
+
+.size {
+    font-weight: normal!important;
+}
+
+.size.active {
+    color: #c7232f;
+    text-decoration: underline;
+}
+
+.size.inactive {
+    color: #b4bed5;
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+.details {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #b4bed5;
+}
+
+.right_upper_container > h2 {
+    color: #304068;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.submit_container > p {
+    color: #c7232f;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.submit_container button {
+    display: flex;
+    background-color: #c7232f;
+    color: white;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.submit_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lower_part h2 {
+    color: #304068;
+}
+
+.lower_part {
+    padding: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.lower_part p {
+    color: #304068;
+    text-align: justify;
+    font-size: large;
+    margin-top: 20px;
+}
+
+.lower_part h3 {
+    color: #304068;
+    text-align: left;
+    margin-top: 20px;
+}
+
