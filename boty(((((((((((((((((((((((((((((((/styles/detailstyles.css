@@ -184,3 +184,46 @@
 .lower_part_flex_item table td {
     color: #304068;
 }
+
+.lower_part_flex_item table th {
+    color: white;
+    background-color: #304068;
+    text-align: center;
+    padding: 20px;
+}
+
+.lower_part_flex_item table td {
+    padding: 5px 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.colored {
+    background-color: #d6d9e1;
+}
+
+.lower_part_flex_item table {
+    width: 100%;
+    margin: auto;
+}
+
+table tr td {
+    width: 50%;
+}
+.lower_part_flex_item:last-child {
+    margin-top: 20px;
+}
+
+
+/*table styles*/
+
+
+
+main h2 {
+    color: #c7232f;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: normal;
+}
