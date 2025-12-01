@@ -175,3 +175,12 @@
     margin-top: 20px;
 }
 
+
+
+
+
+/*table styles*/
+
+.lower_part_flex_item table td {
+    color: #304068;
+}
