@@ -82,6 +82,7 @@
     border-color: #c7232f;
 }
 
+/*colors in demand*/
 
 
 
@@ -256,7 +257,6 @@ main h2 {
 .flex_item_info_div p {
     font-size: 1.6rem;
     padding-left: 5%;
-    color: #c7232f;
 }
 
 .flex_item_info_div > a {
@@ -270,9 +270,12 @@ main h2 {
 }
 
 .second_prize {
-    color: #b4bed5!important;
+    color: #b4bed5;
 }
 
+.first_prize {
+    color: #c7232f;
+}
 
 .middle_text {
     font-size: 1.4rem;
@@ -352,8 +355,64 @@ main h2 {
 
 @media screen and (min-width: 992px) {
 
+    #heading_logo {
+        display: block;
+    }
+
+    .upper_part {
+        display: flex;
+        width: 80%;
+        margin: auto;
+    }
+
+    .upper_part .left_upper_container {
+        width: 50%;
+    }
+
+    .upper_part .right_upper_container {
+        width: 50%;
+    }
+
+    .upper_heading_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: 35%;
+    }
+
+    .upper_heading_container img {
+        width: auto;
+        height: 40px;
+    }
+
+    .no_seen_ever_text_xdddddd {
+        display: block;
+        margin: 80px 0px;
+    }
 
 
-    
+    .details {
+        display: flex;
+        justify-content: left;
+        gap: 20%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .right_upper_container h2 {
+        text-align: left;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+
+    .details_size {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .submit_container > p {
+        font-size: 3rem;
+    }
 }
 

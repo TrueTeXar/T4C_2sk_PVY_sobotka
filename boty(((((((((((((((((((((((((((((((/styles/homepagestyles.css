@@ -136,13 +136,16 @@
 
 .flex_item_info_div p {
     font-size: 1.6rem;
-    padding-left: 5%;
-    color: #c7232f;
+    padding-left: 5%;    
 }
 
 
 .second_prize {
-    color: #b4bed5!important;
+    color: #b4bed5;
+}
+
+.first_prize {
+    color: #c7232f;
 }
 
 
