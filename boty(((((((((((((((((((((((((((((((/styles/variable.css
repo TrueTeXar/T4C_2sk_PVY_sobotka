@@ -23,6 +23,11 @@ header .upper_nav_line {
     gap: 10px;
 }
 
+.upper_nav_line ul > a {
+    color: white;
+    text-decoration: none;
+}
+
 .upper_nav_line ul {
     list-style: none;
     font-size: 1.1rem;
@@ -203,13 +208,20 @@ header .upper_nav_line {
     display: flex;
 }
 
+.card > a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
 .lower_box {
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     max-width: 50%;
+    padding-left: 10px;
 }
 
 .lower_info_passage h3 {

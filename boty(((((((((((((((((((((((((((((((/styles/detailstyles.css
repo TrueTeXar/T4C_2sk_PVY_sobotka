@@ -21,6 +21,7 @@
 .aside_boots img {
     max-width: 30%;
     border: 2px solid #b4bed5;
+    display: block;
 }
 
 .upper_heading_container img {
@@ -356,6 +357,15 @@ main h2 {
     gap: 15px;
     width: 95%;
     margin: 50px auto;
+}
+
+.helper_center_item img:hover {
+    background-color: #c7232f;
+}
+
+.helper_center_item p:hover {
+    color: #c7232f;
+    text-decoration: underline;
 }
 
 /*styles for devices with minimum width 992px*/
