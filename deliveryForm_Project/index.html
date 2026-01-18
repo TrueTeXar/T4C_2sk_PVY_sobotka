@@ -3,15 +3,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>DeliveryForm</title>
+    <title>Objednávkový formulář</title>
 </head>
 <body>
-    <header>
-        <h1>DeliveryForm</h1>
-    </header>
+    <main class="container">
+    <h1>Objednávkový formulář</h1>
 
-    <main>
+    <form id="orderForm" action="#" method="post" novalidate>
+      <!-- Základní -->
+      <fieldset class="card">
+        <legend>Základní</legend>
 
-    </main>
+        <div class="grid">
+          <div class="field">
+            <label for="firstName">Jméno</label>
+            <input type="text" id="firstName" name="firstName" autocomplete="given-name" required />
+          </div>
+
+          <div class="field">
+            <label for="lastName">Příjmení</label>
+            <input type="text" id="lastName" name="lastName" autocomplete="family-name" required />
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Fakturační adresa -->
+      <fieldset class="card">
+        <legend>Fakturační adresa</legend>
+
+        <div class="grid">
+          <div class="field">
+            <label for="billAddress">Adresa</label>
+            <input type="text" id="billAddress" name="billAddress" autocomplete="address-line1" required />
+          </div>
+
+          <div class="field">
+            <label for="billCity">Město</label>
+            <input type="text" id="billCity" name="billCity" autocomplete="address-level2" required />
+          </div>
+
+          <div class="field">
+            <label for="billStreet">Ulice</label>
+            <input type="text" id="billStreet" name="billStreet" autocomplete="address-line2" required />
+          </div>
+
+          <div class="field">
+            <label for="billZip">PSČ</label>
+            <input
+              type="text"
+              id="billZip"
+              name="billZip"
+              inputmode="numeric"
+              autocomplete="postal-code"
+              placeholder="např. 110 00"
+              required
+            />
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Doručovací adresa -->
+      <fieldset class="card">
+        <legend>Doručovací adresa</legend>
+
+        <div class="grid">
+          <div class="field">
+            <label for="shipAddress">Adresa</label>
+            <input type="text" id="shipAddress" name="shipAddress" autocomplete="shipping address-line1" required />
+          </div>
+
+          <div class="field">
+            <label for="shipCity">Město</label>
+            <input type="text" id="shipCity" name="shipCity" autocomplete="shipping address-level2" required />
+          </div>
+
+          <div class="field">
+            <label for="shipStreet">Ulice</label>
+            <input type="text" id="shipStreet" name="shipStreet" autocomplete="shipping address-line2" required />
+          </div>
+
+          <div class="field">
+            <label for="shipZip">PSČ</label>
+            <input
+              type="text"
+              id="shipZip"
+              name="shipZip"
+              inputmode="numeric"
+              autocomplete="shipping postal-code"
+              placeholder="např. 110 00"
+              required
+            />
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Způsob dodání -->
+      <fieldset class="card">
+        <legend>Způsob dodání</legend>
+
+        <div class="radios" role="radiogroup" aria-label="Způsob dodání">
+          <label class="choice">
+            <input type="radio" name="deliveryMethod" id="deliveryDpd" value="dpd" required />
+            DPD Kurýr na adresu
+          </label>
+
+          <label class="choice">
+            <input type="radio" name="deliveryMethod" id="deliveryPost" value="ceska_posta" />
+            Česká pošta
+          </label>
+
+          <label class="choice">
+            <input type="radio" name="deliveryMethod" id="deliveryZasilkovna" value="zasilkovna_adresa" />
+            Zásilkovna na adresu
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Souhlasy -->
+      <fieldset class="card">
+        <legend>Souhlasy</legend>
+
+        <label class="choice">
+          <input type="checkbox" id="consent" name="consent" required />
+          Souhlasím s GDPR a podmínkami
+        </label>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit" id="submitBtn">Odeslat objednávku</button>
+        <button type="reset" class="secondary">Vymazat</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="src/modules/index.js" type="module"></script>
 </body>
 </html>
