@@ -39,7 +39,7 @@
 
           <div class="field">
             <label for="billCity">Město</label>
-            <input type="text" id="billCity" name="billCity" autocomplete="address-level2" required />
+            <input type="text" id="billCity" name="billCity" autocomplete="address-level2" required/>
           </div>
 
           <div class="field">
@@ -62,12 +62,18 @@
         </div>
       </fieldset>
 
+      <fieldset class="card">
+        <legend>faktura</legend>
+        <label for="billCode">Číslo faktury</label>
+        <input type="text" id="billCode" name="billCode" readonly>
+      </fieldset>
+
       <!-- Doručovací adresa -->
       <fieldset class="card">
         <legend>Doručovací adresa</legend>
 
           <label class="choice" for="sameAddress">
-            <input type="checkbox" id="sameAddress"/>
+            <input type="checkbox" id="sameAddress" value="checked"/>
             Dodací adresa stejná jako fakturační.
           </label>
 
