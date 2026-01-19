@@ -102,10 +102,18 @@ button.secondary {
 }
 
 
-.notification {
+
+
+.hidden {
+  display: none;
+}
+
+#notification {
+
   border: 1px solid var(--border);
   border-radius: 10px;
   text-align: center;
   font-style: italic;
+  background-color: #05500b;
 }
 

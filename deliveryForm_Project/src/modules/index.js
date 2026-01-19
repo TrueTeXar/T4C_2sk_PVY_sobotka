@@ -81,9 +81,9 @@ document.addEventListener("DOMContentLoaded", function() {
             form.reportValidity();
             return;
         }
-        else {
-            return
-        }
+
+
+        const deliveryWay = document.querySelector('input[name="deliveryMethod"]:checked');
 
 
         const queue = {
@@ -106,11 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 zip: document.getElementById("shipZip").value
             },
 
-            deliveryMethod: document.querySelector(
-                'input[name="deliveryMethod"]:checked'
-            ).value,
-
-            
+            deliveryMethod: deliveryWay.value
 
         };
 
@@ -118,14 +114,19 @@ document.addEventListener("DOMContentLoaded", function() {
         db.push(queue);
         console.log(db);
 
+        notif.classList.remove("hidden");
+
 
         form.reset();
-
-
 
         billInput.value = generateBillNumber();
     })
 })
+
+
+
+
+
 
 
 
