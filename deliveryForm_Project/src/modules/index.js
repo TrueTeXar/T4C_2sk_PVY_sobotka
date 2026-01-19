@@ -34,7 +34,7 @@ checkbox.addEventListener("change", function () {
         shipping_address.address.value = "";
         shipping_address.city.value = "";
         shipping_address.street.value = "";
-        shipping_address.postal_code = "";
+        shipping_address.postal_code.value = "";
     }
 })
 
@@ -63,10 +63,12 @@ function generateBillNumber() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
+
     const billInput = document.getElementById("billCode")
     
     const form = document.getElementById("orderForm");
 
+    const notif = document.getElementById("notification");
 
     billInput.value = generateBillNumber();
 
@@ -78,6 +80,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
             form.reportValidity();
             return;
+        }
+        else {
+            return
         }
 
 
@@ -115,6 +120,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         form.reset();
+
+
 
         billInput.value = generateBillNumber();
     })
