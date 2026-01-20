@@ -5,6 +5,36 @@ let editIndex = null;
 
 
 
+
+
+
+function fillForm(data) {
+    document.getElementById("billCode").value = data.billCode;
+
+    document.getElementById("firstName").value = data.firstName;
+    document.getElementById("lastName").value = data.lastName;
+
+    document.getElementById("billAddress").value = data.billingAddress.address;
+    document.getElementById("billCity").value = data.billingAddress.city;
+    document.getElementById("billStreet").value = data.billingAddress.street;
+    document.getElementById("billZip").value = data.billingAddress.zip;
+
+    document.getElementById("shipAddress").value = data.shippingAddress.address;
+    document.getElementById("shipCity").value = data.shippingAddress.city;
+    document.getElementById("shipStreet").value = data.shippingAddress.street;
+    document.getElementById("shipZip").value = data.shippingAddress.zip;
+
+    document.querySelector(
+        `input[name="deliveryMethod"][value="${data.deliveryMethod}"]`
+    ).checked = true;
+}
+
+
+
+
+
+
+
 //fakturační a dodací adresa
 const checkbox = document.getElementById("sameAddress")
 
@@ -73,7 +103,7 @@ document.getElementById("loadBill").addEventListener("click", () => {
 
     const index = db.findIndex(f => f.billCode === showMe);
 
-    //find Index returns 0,1 or 2 if true
+    //findIndex returns 0,1 or 2 if true
     if (index === -1) {
         alert("faktura nenalezena.");
         return;
@@ -82,6 +112,7 @@ document.getElementById("loadBill").addEventListener("click", () => {
     editIndex = index;
     const bill = db[index];
 
+    fillForm(bill);
 })
 
 
@@ -134,9 +165,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         };
 
+            //tady asi bude problém :((((((
+            if (editIndex !== null) {
+                db[editIndex] = queue.billCode;
+            }
+
 
         db.push(queue);
         console.log(db);
+
 
         notif.classList.remove("hidden");
 
