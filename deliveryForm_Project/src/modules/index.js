@@ -1,6 +1,8 @@
 //auxiliary variables
 const db = [];
 
+let editIndex = null;
+
 
 
 //fakturační a dodací adresa
@@ -59,6 +61,28 @@ function generateBillNumber() {
 }
 
 
+
+
+document.getElementById("loadBill").addEventListener("click", () => {
+
+    const showMe = prompt("Zadejte číslo faktury.");
+
+    if (!showMe) {
+        return;
+    }
+
+    const index = db.findIndex(f => f.billCode === showMe);
+
+    //find Index returns 0,1 or 2 if true
+    if (index === -1) {
+        alert("faktura nenalezena.");
+        return;
+    }
+
+    editIndex = index;
+    const bill = db[index];
+
+})
 
 
 
