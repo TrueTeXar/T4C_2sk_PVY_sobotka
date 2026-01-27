@@ -98,6 +98,24 @@ main > p {
     background-color: white;
 }
 
+.modified-color {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+}
+
+#own-color-box {
+    width: 100px;
+    height: 100px;
+}
+
+.modified-color > button {
+    margin: 20px;
+    padding: 10px;
+    background-color: #1a78b8;
+    border-radius: 5px;
+}
 
 
 /*styles for JavaScript reactivity*/
