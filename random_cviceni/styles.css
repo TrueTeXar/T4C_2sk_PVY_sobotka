@@ -6,4 +6,17 @@
 
 body {
     background-color: black;
+    color: white;
+}
+
+ul {
+    margin: 20px;
+}
+
+li {
+    padding: 10px;
+}
+
+.upper-flex {
+    margin: 10px;
 }
