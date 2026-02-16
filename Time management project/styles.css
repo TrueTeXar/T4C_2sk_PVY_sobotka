@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3b3b79;
+    color : white;
+
+    font-family: Bahnschrift;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+
+.upper-flex {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+
+    margin: auto;
+    margin-top: 50px;
+}
+
+#task-description {
+    height: 100px;
+    width: 350px;
+
+    line-height: 2;
+    font-size: 1rem;
+}
+
+.inner-flex {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 15px;
+}
+
