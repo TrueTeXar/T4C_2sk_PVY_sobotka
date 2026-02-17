@@ -19,19 +19,15 @@ h1 {
 
 .upper-flex {
     display: flex;
-    flex-direction: column;
-
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: row;
     gap: 10px;
 
     margin: auto;
     margin-top: 50px;
+    width: 100%;
 }
 
 #task-description {
-    height: 100px;
-    width: 350px;
 
     line-height: 2;
     font-size: 1rem;
@@ -43,3 +39,60 @@ h1 {
     margin: 20px 15px;
 }
 
+button {
+    width: 350px;
+    padding: 10px;
+}
+
+h2 {
+    margin-top: 20px ;
+}
+
+.box-for-tasks {
+    width: 50%;
+
+    border: 2px solid white;
+}
+
+.box-for-tasks p {
+    text-align: center;
+}
+
+
+
+
+
+/* dynamic style for one task*/
+.task-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.error-message {
+    color: red;
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+
+    display: none;
+}
+
+.active {
+    display : block;
+}
+
+.inactive {
+    display: none;
+}
+
+.delete-specific-task {
+    border: 1px solid red;
+    color: red;
+    cursor : pointer;
+}
+
+.random-color-class {
+    color: red;
+}
