@@ -23,8 +23,28 @@ const noTasks = document.getElementById("no-tasks-yet");
 
 
 //dynamic elements
+const activeTaskBox = document.getElementById("active-task");
 
 
+const activeTaskName = document.createElement("p");
+const activeTaskDateWithStart = document.createElement("p");
+const activeTaskDescription = document.createElement("p");
+const activeTaskStartedAt = document.createElement("p");
+const activeTaskEndButton = document.createElement("button");
+
+
+
+//date variables
+const now = new Date().toLocaleTimeString("cs-CZ", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+});
+
+const relapsedTime = Date.now() - now; //teď mínus teď tehdy
+
+
+console.log(now);
 
 
 formElement.addEventListener('submit', (e) => {
@@ -62,8 +82,21 @@ formElement.addEventListener('submit', (e) => {
     taskBox.appendChild(row);
 
 
+    if (startTime.value === "" && endTime.value === "") {
+        activeTaskName.textContent = taskName.value;
+        activeTaskDateWithStart.textContent = now;
+        activeTaskDescription.textContent = taskDescription.value;
+        activeTaskStartedAt.textContent = relapsedTime.toString();
+        activeTaskEndButton.textContent = "End Now";
 
-    //předpěžný remove
+        activeTaskBox.appendChild(activeTaskName);
+        activeTaskBox.appendChild(activeTaskDateWithStart);
+        activeTaskBox.appendChild(activeTaskDescription);
+        activeTaskBox.appendChild(activeTaskStartedAt);
+        activeTaskBox.appendChild(activeTaskEndButton);
+    }
+
+    //předběžný remove
     row.addEventListener("click", e => {
         e.preventDefault();
         row.remove();
@@ -91,3 +124,8 @@ resetButton.addEventListener('click', (e) => {
         }
     })
 })
+
+
+
+
+
