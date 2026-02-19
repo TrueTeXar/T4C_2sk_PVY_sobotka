@@ -29,20 +29,15 @@ const activeTaskBox = document.getElementById("active-task");
 const activeTaskName = document.createElement("p");
 const activeTaskDateWithStart = document.createElement("p");
 const activeTaskDescription = document.createElement("p");
-const activeTaskStartedAt = document.createElement("p");
+const activeTimer = document.createElement("p");
 const activeTaskEndButton = document.createElement("button");
 
 
 
 //date variables
-const now = new Date().toLocaleTimeString("cs-CZ", {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit"
-});
+const now = Date.now();
 
 const relapsedTime = Date.now() - now; //teď mínus teď tehdy
-
 
 console.log(now);
 
@@ -75,33 +70,40 @@ formElement.addEventListener('submit', (e) => {
 
     const deleteTask = document.createElement("p");
     deleteTask.textContent = "delete task";
+    
 
-    row.innerHTML = `${dataObject.taskName} - ${dataObject.taskDescription} - ${dataObject.startTime} - ${dataObject.endTime} | ${dataObject.deleteTask = deleteTask.textContent}`;
-
-
+    row.innerHTML = `${dataObject.taskName} - ${dataObject.taskDescription} - ${dataObject.startTime} - ${dataObject.endTime} | <p id="delete-button" style="color: red; cursor: pointer;">${dataObject.deleteTask = deleteTask.textContent}</p>`;
+    
+    const deleteButtonToClick = row.querySelector("#delete-button");
+    
+    
     taskBox.appendChild(row);
-
-
-    if (startTime.value === "" && endTime.value === "") {
-        activeTaskName.textContent = taskName.value;
-        activeTaskDateWithStart.textContent = now;
-        activeTaskDescription.textContent = taskDescription.value;
-        activeTaskStartedAt.textContent = relapsedTime.toString();
-        activeTaskEndButton.textContent = "End Now";
-
-        activeTaskBox.appendChild(activeTaskName);
-        activeTaskBox.appendChild(activeTaskDateWithStart);
-        activeTaskBox.appendChild(activeTaskDescription);
-        activeTaskBox.appendChild(activeTaskStartedAt);
-        activeTaskBox.appendChild(activeTaskEndButton);
-    }
-
+    
     //předběžný remove
-    row.addEventListener("click", e => {
+    deleteButtonToClick.addEventListener("click", e => {
         e.preventDefault();
         row.remove();
     })
+    
+    
+    if (startTime.value === "" && endTime.value === "") {
+        
+        activeTaskName.textContent = taskName.value;
+        activeTaskDateWithStart.textContent = now.toString();
+        activeTaskDescription.textContent = taskDescription.value;
+        activeTimer.textContent = relapsedTime.toString();
+        activeTaskEndButton.textContent = "End Now";
 
+
+        
+        activeTaskBox.appendChild(activeTaskName);
+        activeTaskBox.appendChild(activeTaskDateWithStart);
+        activeTaskBox.appendChild(activeTaskDescription);
+        activeTaskBox.appendChild(activeTimer);
+        activeTaskBox.appendChild(activeTaskEndButton);
+    }
+    
+    
 });
 
 
