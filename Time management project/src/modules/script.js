@@ -1,3 +1,5 @@
+import {toFormat} from "./time.js";
+
 const formElement = document.querySelector('form');
 const taskBox = document.querySelector('.box-for-tasks');
 
@@ -24,20 +26,22 @@ const noTasks = document.getElementById("no-tasks-yet");
 
 //dynamic elements
 const activeTaskBox = document.getElementById("active-task");
+let activeTasksIsActive = false;
 
 
 const activeTaskName = document.createElement("p");
 const activeTaskDateWithStart = document.createElement("p");
+const activeTaskEndDate = document.createElement("p");
 const activeTaskDescription = document.createElement("p");
 const activeTimer = document.createElement("p");
 const activeTaskEndButton = document.createElement("button");
 
 
+activeTaskEndButton.classList.add("end-button-styles");
+
 
 //date variables
 const now = Date.now();
-
-const relapsedTime = Date.now() - now; //teď mínus teď tehdy
 
 console.log(now);
 
@@ -84,26 +88,49 @@ formElement.addEventListener('submit', (e) => {
         e.preventDefault();
         row.remove();
     })
-    
-    
+
+
+    const interval = setInterval(() => {
+        const relapsedTime = Date.now() - now; //teď mínus teď tehdy
+        activeTimer.textContent = toFormat(relapsedTime);
+    }, 1000);
+
+
+    const additionalActiveText = document.createElement("p");
+    additionalActiveText.textContent = "active •"
     if (startTime.value === "" && endTime.value === "") {
         
         activeTaskName.textContent = taskName.value;
-        activeTaskDateWithStart.textContent = now.toString();
+        activeTaskDateWithStart.textContent = new Date().toLocaleTimeString("cs-CZ");
+        activeTaskEndDate.textContent = "--"
         activeTaskDescription.textContent = taskDescription.value;
-        activeTimer.textContent = relapsedTime.toString();
         activeTaskEndButton.textContent = "End Now";
 
 
         
         activeTaskBox.appendChild(activeTaskName);
         activeTaskBox.appendChild(activeTaskDateWithStart);
+        activeTaskBox.appendChild(activeTaskEndDate);
         activeTaskBox.appendChild(activeTaskDescription);
         activeTaskBox.appendChild(activeTimer);
         activeTaskBox.appendChild(activeTaskEndButton);
+        activeTaskBox.appendChild(additionalActiveText);
+
+        activeTaskBox.style.border = "2px solid green";
     }
-    
-    
+
+
+    activeTaskEndButton.addEventListener("click", e => {
+        e.preventDefault();
+        activeTaskEndDate.textContent = new Date().toLocaleTimeString("cs-CZ");
+        activeTaskEndButton.remove();
+        additionalActiveText.remove();
+        activeTaskBox.style.border = "2px solid white";
+        clearInterval(interval);
+
+
+        //TODO: dopsat přepisování času do taskBoxu po ukončení aktivního tasku
+    })
 });
 
 

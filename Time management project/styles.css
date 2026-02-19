@@ -59,8 +59,41 @@ h2 {
 }
 
 
+#active-task {
+    border-radius: 10px;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    width: fit-content;
+    margin-top: 10px;
+    margin-left: 100px;
+}
 
 
+.end-button-styles {
+    width: fit-content;
+
+}
+
+
+.big-flex {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid white;
+    width: fit-content;
+}
+
+.active-task-header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 100px;
+}
 
 /* dynamic style for one task*/
 .task-row {
