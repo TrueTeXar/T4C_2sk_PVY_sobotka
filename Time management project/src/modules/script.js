@@ -1,4 +1,5 @@
 import {toFormat} from "./time.js";
+import {getTasks, saveTasks}  from "./tasks.js";
 
 const formElement = document.querySelector('form');
 const taskBox = document.querySelector('.box-for-tasks');
@@ -77,11 +78,25 @@ formElement.addEventListener('submit', (e) => {
     
 
     row.innerHTML = `${dataObject.taskName} - ${dataObject.taskDescription} - ${dataObject.startTime} - ${dataObject.endTime} | <p id="delete-button" style="color: red; cursor: pointer;">${dataObject.deleteTask = deleteTask.textContent}</p>`;
+    row.style.paddingTop = "5px";
     
     const deleteButtonToClick = row.querySelector("#delete-button");
     
     
     taskBox.appendChild(row);
+
+    const tasks = getTasks();
+
+    const id = Date.now();
+
+    tasks.push({
+        id: id,
+        name: dataObject.taskName,
+        description: dataObject.taskDescription,
+        start: dataObject.startTime,
+        end: dataObject.endTime,
+        duration: null
+    });
     
     //předběžný remove
     deleteButtonToClick.addEventListener("click", e => {
@@ -95,9 +110,6 @@ formElement.addEventListener('submit', (e) => {
         activeTimer.textContent = toFormat(relapsedTime);
     }, 1000);
 
-
-    const additionalActiveText = document.createElement("p");
-    additionalActiveText.textContent = "active •"
     if (startTime.value === "" && endTime.value === "") {
         
         activeTaskName.textContent = taskName.value;
@@ -114,7 +126,7 @@ formElement.addEventListener('submit', (e) => {
         activeTaskBox.appendChild(activeTaskDescription);
         activeTaskBox.appendChild(activeTimer);
         activeTaskBox.appendChild(activeTaskEndButton);
-        activeTaskBox.appendChild(additionalActiveText);
+
 
         activeTaskBox.style.border = "2px solid green";
     }
@@ -124,12 +136,24 @@ formElement.addEventListener('submit', (e) => {
         e.preventDefault();
         activeTaskEndDate.textContent = new Date().toLocaleTimeString("cs-CZ");
         activeTaskEndButton.remove();
-        additionalActiveText.remove();
         activeTaskBox.style.border = "2px solid white";
         clearInterval(interval);
 
 
+        row.innerHTML = `${dataObject.taskName} - ${dataObject.taskDescription} - ${dataObject.startTime = activeTaskDateWithStart.textContent} - ${dataObject.endTime = activeTaskEndDate.textContent} - <p>duration: ${activeTimer.textContent}</p> | <p id="delete-button" style="color: red; cursor: pointer;">${dataObject.deleteTask = deleteTask.textContent}</p>`;
         //TODO: dopsat přepisování času do taskBoxu po ukončení aktivního tasku
+
+        const tasks = getTasks();
+        const task = tasks.find((task) => task.id === id);
+
+        if (!task) {
+            return;
+        }
+
+        task.end = activeTaskEndDate.textContent;
+        task.duration = activeTimer.textContent;
+
+        saveTasks(tasks);
     })
 });
 
@@ -148,7 +172,7 @@ resetButton.addEventListener('click', (e) => {
 
     //mělo zobrazovat no tasks yet pokud žádný řádek tam není, ale nezobrazuje
     taskBox.addEventListener("input", () => {
-        if (taskBox.children.length === null) {
+        if (taskBox.children.length === 0) {
             noTasks.classList.add("active");
         }
     })
@@ -156,5 +180,26 @@ resetButton.addEventListener('click', (e) => {
 
 
 
+function renderTasks() {
+    const tasks = getTasks();
+
+    if (tasks.length === 0) {
+        noTasks.classList.add("active");
+        return;
+    }
+
+    noTasks.classList.remove("active");
+
+    tasks.forEach(task => {
+        const row = document.createElement("div");
+        row.classList.add("task-row");
+
+        row.innerHTML =  `${task.name} - ${task.description} - ${task.start} - ${task.end ?? "--"} - duration: ${task.duration ?? "--"}`;
+
+        taskBox.appendChild(row);
+    });
+}
+
+renderTasks();
 
 
