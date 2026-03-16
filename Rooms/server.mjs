@@ -1,10 +1,12 @@
 import express, {json} from 'express';
 import cors from 'cors';
-
+import {getPool} from "./db.mjs";
 
 const app = express();
 const port = 3000;
 
+
+app.use(express.json());
 app.use(cors());
 
 app.use(function (req, res, next) {
@@ -15,19 +17,24 @@ app.use(function (req, res, next) {
 });
 
 
-app.get('/api/rooms', function (req, res) {
-    res.send([
-        {
-            id: 1,
-            roomNumber: "S115",
-            building: "Campus",
-            capacity: 50,
-            type: "Lecture Hall"
+app.get("/api/rooms", async (req, res)=> {
+    const [data, metaData] = await getPool().executeSql("SELECT * FROM rooms");
+    res.send(data);
+})
+
+
+async function getData() {
+    try {
+        const response = fetch('/api/rooms');
+
+        if (response.ok) {
+            return await response.json();
         }
-    ]);
-});
-
-
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
 
 
 
